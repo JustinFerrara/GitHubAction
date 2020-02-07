@@ -1,0 +1,25 @@
+{
+  "name": "GitHubAction",
+  "version": "1.0.0",
+  "description": "A node-based front-end web rendering client",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinFerrara/GitHubAction.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "handlebars"
+  ],
+  "author": "Justin Ferrara",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/JustinFerrara/GitHubAction/issues"
+  },
+  "homepage": "https://github.com/JustinFerrara/GitHubAction#readme",
+  "dependencies": {
+  }
+}
