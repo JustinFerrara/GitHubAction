@@ -1,7 +1,8 @@
 name: Tests
 
 on:
-  merge:
+  check_suite:
+    types: [completed]
     branches:
     - master
 
