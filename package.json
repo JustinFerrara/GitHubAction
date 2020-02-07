@@ -4,6 +4,7 @@
   "description": "A node-based front-end web rendering client",
   "main": "index.js",
   "scripts": {
+    "test:action": "sh scripts/test.sh"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,7 @@
   },
   "homepage": "https://github.com/JustinFerrara/GitHubAction#readme",
   "dependencies": {
+    "@actions/core": "^1.2.2",
+    "@actions/github": "^2.1.0"
   }
 }

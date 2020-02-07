@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  merge:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: run script
+      run: |
+        npm run test:action;
+    # - name: Start Fenrir and run WDIO Tests
+    #   run: |
+    #     FENRIR_SITE=bi CONTEXT=testing npm run test:wdio:gha
+    #     killall -9 node
+    #     FENRIR_SITE=insider CONTEXT=testing npm run test:wdio:gha
+    # - uses: actions/upload-artifact@v1
+    #   if: failure()
+    #   with:
+    #     name: Test results
+    #     path: test/wdio/reports/.timeline
