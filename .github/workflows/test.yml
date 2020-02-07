@@ -1,8 +1,7 @@
 name: Tests
 
 on:
-  check_suite:
-    types: [completed]
+  push:
     branches:
     - master
 
