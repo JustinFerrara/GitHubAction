@@ -1,14 +1,13 @@
 name: Tests
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
     - master
 
 jobs:
   build:
-    runs-on: self-hosted
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 10.x
