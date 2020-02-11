@@ -1,4 +1,4 @@
-name: test
+name: test-action
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 10.x
