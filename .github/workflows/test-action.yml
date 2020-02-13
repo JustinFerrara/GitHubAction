@@ -15,18 +15,28 @@ jobs:
     - uses: actions/checkout@v2
       # with:
       #   path: main
+
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+
     - name: 'npm install'
       run: |
         npm install;
+
     - name: 'Checking it'
       uses: './.github/actions/check'
-      with:
-        github_token: '${{ secrets.GITHUB_TOKEN }}'
 
+    - name: Deploy
+    uses: s0/git-publish-subdir-action@master
+    with:
+      github_token: '${{ secrets.GITHUB_TOKEN }}'
+    env:
+      REPO: git@github.com:JustinFerrara/HelloWorld.git
+      BRANCH: auto-vcl-ab-test
+      FOLDER: fastly/shared
+      # SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
 
 
 # jobs:
