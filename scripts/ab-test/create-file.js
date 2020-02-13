@@ -70,9 +70,15 @@ sub req_ab_test_segment_user {
     console.log(chalk.green.bold(`Export to Fastly > ${chalk.reset('Generated VCL Script')}`));
 
     const directory = path.resolve(__dirname, '../../../fastly/shared'); 
-    if (!fs.existsSync(directory)) {
-      fs.mkdirSync(directory);
+
+    if (!fs.existsSync(path.resolve(__dirname, '../../../fastly'))) {
+      fs.mkdirSync(path.resolve(__dirname, '../../../fastly'));
     }
+
+    if (!fs.existsSync(path.resolve(__dirname, '../../../fastly/shared'))) {
+      fs.mkdirSync(path.resolve(__dirname, '../../../fastly/shared'));
+    }
+
     const filepath = path.resolve(__dirname, '../../../fastly/shared/sub-ab-testing.vcl');
     fs.writeFileSync(filepath, script);
 
