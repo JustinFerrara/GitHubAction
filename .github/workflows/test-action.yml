@@ -9,9 +9,10 @@ jobs:
   build:
     name: 'Check Workflow'
     runs-on: self-hosted
+    uses: 'actions/checkout@v2'
     steps:
     - name: 'Checking it'
-      uses: './.github/actions/check@v1'
+      uses: './.github/actions/check'
 
 
 
