@@ -23,7 +23,7 @@ jobs:
       run: |
         npm install;
     - name: 'Checking it'
-      uses: './.github/actions/check'
+      uses: './.github/actions/check@master'
       with:
         github_token: '${{ secrets.GITHUB_TOKEN }}'
 
