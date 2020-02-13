@@ -18,8 +18,6 @@ jobs:
     - name: 'npm install'
       run: |
         npm install;
-    - name: 'Starting it'
-      uses: 'actions/checkout@v2'
     - name: 'Checking it'
       uses: './.github/actions/check'
 
