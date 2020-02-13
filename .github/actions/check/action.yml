@@ -1,0 +1,10 @@
+name: 'Check action'
+description: 'Check the contents of the PR'
+inputs:
+  branch:
+    description: 'Branch name'
+    required: false
+    default: 'Whaaaaa'
+runs:
+  using: 'node12'
+  main: 'index.js'

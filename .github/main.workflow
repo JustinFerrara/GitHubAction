@@ -10,8 +10,13 @@ action "install" {
 
 action "test" {
   uses = "docker://node:11.6.0"
-  args = "npm run test:action"
-  needs = ["install"]
+  args = "npm run check:action"
+  # needs = ["checkout-current"]
+}
+
+action "check" {
+  uses = "./.github/actions/check@master"
+  # needs = ["install"]
 }
 
 action "lint" {

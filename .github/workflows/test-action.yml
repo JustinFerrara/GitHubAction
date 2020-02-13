@@ -7,16 +7,40 @@ on:
 
 jobs:
   build:
+    name: 'Check Workflow'
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
-    - name: run script
-      run: |
-        npm run test:action;
+    - name: 'Checking it'
+      uses: 'actions/check@v1'
+
+
+
+# jobs:
+#   build:
+#     runs-on: self-hosted
+#     steps:
+#     - name: 'Checkout current'
+#       uses: actions/checkout@v2
+#       with:
+#         path: main
+#       run: |
+#         git status
+#     - name: 'Checkout Varnish'
+#       uses: actions/checkout@v2
+#       with:
+#         repository: businessinsider/varnish
+#         path: varnish
+#       run: |
+#         git status
+#     - name: Use Node.js 10.x
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 10.x
+#     - name: run script
+#       run: |
+#         node scripts/check.js
+
+      # npm run test:action;
     # - name: Start Fenrir and run WDIO Tests
     #   run: |
     #     FENRIR_SITE=bi CONTEXT=testing npm run test:wdio:gha
