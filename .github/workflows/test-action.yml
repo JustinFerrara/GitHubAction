@@ -13,6 +13,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
+      with:
+        path: main
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
@@ -22,6 +24,8 @@ jobs:
         npm install;
     - name: 'Checking it'
       uses: './.github/actions/check'
+      with:
+        github_token: '${{ secrets.GITHUB_TOKEN }}'
 
 
 

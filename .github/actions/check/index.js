@@ -5,6 +5,9 @@ const createFile = require('../../../scripts/ab-test/create-file');
 
 console.log('HERE WE ARE IN THE CHECK ACTION');
 
+const token = core.getInput('github_token');
+console.log('token', token);
+
 // console.log(core);
 // console.log(github);
 
