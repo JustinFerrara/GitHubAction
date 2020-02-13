@@ -1,13 +1,13 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
+// const github = require('@actions/github');
 
 const createFile = require('../../../scripts/ab-test/create-file');
 
 console.log('HERE WE ARE IN THE CHECK ACTION');
 
 console.log('WHY');
-const token = core.getInput('github_token');
-console.log('token', token);
+// const token = core.getInput('github_token');
+// console.log('token', token);
 
 // console.log(core);
 // console.log(github);
