@@ -10,6 +10,14 @@ jobs:
     name: 'Check Workflow'
     runs-on: self-hosted
     steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: 'npm install'
+      run: |
+        npm install;
     - name: 'Starting it'
       uses: 'actions/checkout@v2'
     - name: 'Checking it'
