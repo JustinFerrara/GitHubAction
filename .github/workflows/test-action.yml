@@ -29,14 +29,14 @@ jobs:
       uses: './.github/actions/check'
 
     - name: Deploy
-    uses: s0/git-publish-subdir-action@master
-    with:
-      github_token: '${{ secrets.GITHUB_TOKEN }}'
-    env:
-      REPO: git@github.com:JustinFerrara/HelloWorld.git
-      BRANCH: auto-vcl-ab-test
-      FOLDER: fastly/shared
-      # SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      uses: s0/git-publish-subdir-action@master
+      with:
+        github_token: '${{ secrets.GITHUB_TOKEN }}'
+      env:
+        REPO: git@github.com:JustinFerrara/HelloWorld.git
+        BRANCH: auto-vcl-ab-test
+        FOLDER: fastly/shared
+        # SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
 
 
 # jobs:
