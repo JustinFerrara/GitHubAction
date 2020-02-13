@@ -15,7 +15,7 @@ action "test" {
 }
 
 action "check" {
-  uses = "./.github/actions/check@master"
+  uses = "./.github/actions/check"
   # needs = ["install"]
 }
 
