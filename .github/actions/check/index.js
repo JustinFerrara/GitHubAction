@@ -11,6 +11,6 @@ const branch = core.getInput('branch');
 console.log(branch);
 
 console.log(github.context);
-console.log(github.GitHub.branch);
+console.log(github.github.context.repo);
 
 require('../../../scripts/check');
