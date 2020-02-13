@@ -1,16 +1,20 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
+const createFile = require('../../../scripts/ab-test/create-file');
+
 console.log('HERE WE ARE IN THE CHECK ACTION');
 
-console.log(core);
-console.log(github);
+// console.log(core);
+// console.log(github);
 
-const branch = core.getInput('branch');
+// const branch = core.getInput('branch');
 
-console.log(branch);
+// console.log(branch);
 
-console.log(github.context);
-console.log(github.context.repo);
+// console.log(github.context);
+// console.log(github.context.repo);
 
-require('../../../scripts/check');
+const filePath = createFile();
+
+console.log(filePath)
