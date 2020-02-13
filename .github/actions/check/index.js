@@ -3,9 +3,9 @@ const core = require('@actions/core');
 
 const createFile = require('../../../scripts/ab-test/create-file');
 
-console.log('HERE WE ARE IN THE CHECK ACTION');
-
+console.log('HERE WE ARE IN THE CHECK ACTION. Please Update');
 console.log('WHY');
+
 // const token = core.getInput('github_token');
 // console.log('token', token);
 
