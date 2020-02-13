@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'README.md'
+    # paths:
+    #   - 'scripts/abtest/tests.js'
 
 jobs:
   build:

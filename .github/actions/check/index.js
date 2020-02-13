@@ -9,3 +9,5 @@ console.log(github);
 const branch = core.getInput('branch');
 
 console.log(branch);
+
+console.log(github.context);
