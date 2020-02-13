@@ -5,10 +5,10 @@ inputs:
     description: 'Branch name'
     required: false
     default: 'Whaaaaa'
-  github_token:
-    description: 'GIT HUB TOKEN'
-    require: false
-    default: ${{ secrets.GITHUB_TOKEN }}
+  # github_token:
+  #   description: 'GIT HUB TOKEN'
+  #   require: false
+  #   default: ${{ secrets.GITHUB_TOKEN }}
 runs:
   using: 'node12'
   main: 'index.js'
