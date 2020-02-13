@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const check = require('scripts/check');
+const check = require('../../../scripts/check');
 
 console.log('HERE WE ARE IN THE CHECK ACTION');
 
