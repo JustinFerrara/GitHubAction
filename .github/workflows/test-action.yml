@@ -36,7 +36,7 @@ jobs:
         REPO: git@github.com:JustinFerrara/HelloWorld.git
         BRANCH: auto-vcl-ab-test
         FOLDER: fastly/shared
-        # SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.PULL_FROM_DIFFERENT_REPO }}
 
 
 # jobs:
