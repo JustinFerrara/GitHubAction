@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/JustinFerrara/GitHubAction#readme",
   "dependencies": {
-    "@actions/core": "^1.2.2",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.1.0",
     "chalk": "^3.0.0"
   }
